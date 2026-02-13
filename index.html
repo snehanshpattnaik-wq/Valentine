@@ -118,6 +118,10 @@
 </head>
 <body>
 
+    <audio id="myAudio" loop>
+        <source src="your-song.mp3" type="audio/mpeg">
+    </audio>
+
     <img src="side1.jpg" class="bg-photo pos1" onerror="this.src='https://via.placeholder.com/150?text=Yaadein+1'">
     <img src="side2.jpg" class="bg-photo pos2" onerror="this.src='https://via.placeholder.com/150?text=Yaadein+2'">
     <img src="side3.jpg" class="bg-photo pos3" onerror="this.src='https://via.placeholder.com/150?text=Yaadein+3'">
@@ -127,7 +131,7 @@
         <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHp6b3Z1dTVtODVpZXk2N3hvZzg3ZmRobWJyZ2JocjBscnlsYnhkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" class="gif" alt="cute cat">
         <h1>Stop Right There! ✋</h1>
         <p>This website is restricted for my Maalkin jii. Kya aap hoo hamari Maalkin??</p>
-        <button onclick="nextPage(2)">Hnnn jii 😁😁💁‍♀️</button>
+        <button onclick="startJourney()">Hnnn jii 😁😁💁‍♀️</button>
     </div>
 
     <div id="page2" class="page">
@@ -168,6 +172,13 @@
     </div>
 
     <script>
+        function startJourney() {
+            // Play Music
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(e => console.log("Music play failed - need interaction"));
+            nextPage(2);
+        }
+
         function nextPage(pageNum) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
             document.getElementById('page' + pageNum).classList.add('active');
