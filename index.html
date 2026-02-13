@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Special Message for You ❤️</title>
+    <title>A Special Message for My Maalkin ❤️</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         :root {
@@ -34,13 +34,32 @@
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
             position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         .active { display: block; animation: zoomIn 0.5s; }
 
-        h1 { color: var(--pink); margin-bottom: 1rem; }
+        h1 { color: var(--pink); margin-bottom: 1rem; font-size: 1.8rem; }
         
-        .gif { width: 100%; max-width: 250px; border-radius: 15px; margin-bottom: 20px; }
+        .gif { width: 100%; max-width: 220px; border-radius: 15px; margin-bottom: 15px; }
+
+        /* Polaroid Style for your photos */
+        .polaroid {
+            background: white;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 10px auto;
+            width: 80%;
+            transform: rotate(-2deg);
+        }
+
+        .personal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
 
         button {
             background-color: var(--pink);
@@ -51,13 +70,13 @@
             font-size: 1.1rem;
             cursor: pointer;
             transition: 0.3s;
-            margin-top: 20px;
+            margin-top: 15px;
+            width: 100%;
         }
 
-        button:hover { transform: scale(1.1); background-color: #ff758f; }
+        button:hover { transform: scale(1.05); background-color: #ff758f; }
 
-        /* The "No" button's special style */
-        #noBtn { background-color: #adb5bd; position: absolute; }
+        #noBtn { background-color: #adb5bd; position: absolute; width: auto; z-index: 100; }
 
         .list-item {
             text-align: left;
@@ -86,52 +105,64 @@
     <div id="page1" class="page active">
         <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHp6b3Z1dTVtODVpZXk2N3hvZzg3ZmRobWJyZ2JocjBscnlsYnhkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif" class="gif" alt="cute cat">
         <h1>Stop Right There! ✋</h1>
-        <p>This website is restricted for my Maalkin jii. Kya aap hoo hamari Maalkin??</p>
+        <p>This website is restricted for my <b>Maalkin jii</b>. Kya aap hoo hamari Maalkin??</p>
         <button onclick="nextPage(2)">Hnnn jii 😁😁💁‍♀️</button>
     </div>
 
     <div id="page2" class="page">
-        <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bTVobjBjOGg3d2R0YTRhZmx2dzV6Z3JmbjI4a3czNmpqaHZ2NnRuMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/aEXP6scfSSwQo/giphy.gif" class="gif" alt="dance">
+        <div class="polaroid">
+            <img src="us1.jpg" class="personal-img" alt="Hamari Photo" onerror="this.src='https://via.placeholder.com/250x300?text=Insert+Our+Photo+Here'">
+            <p style="font-size: 0.8rem; margin-top: 5px;">Hamari cute si photo ❤️</p>
+        </div>
         <h2>3 Reasons to say YES:</h2>
-        <div class="list-item"><b>1. Algorithm:</b> Cause instagram says i am the more loving partner 😁😁😁</div>
-        <div class="list-item"><b>2. Finance:</b> I am a high-growth asset with a 100% "Love Return" guarantee.</div>
-        <div class="list-item"><b>3. Me:</b> I am yours and ofcourse I am Snehansh Pattnaik😎.</div>
+        <div class="list-item"><b>1. Algorithm:</b> Cause Instagram says I am the more loving partner (and data never lies!) 😁</div>
+        <div class="list-item"><b>2. Finance:</b> Investing in me yields a 100% "Love Return" and infinite virtual puchhiyan.</div>
+        <div class="list-item"><b>3. Physics:</b> Even at $r = 0$ km, the limit of my love for you does not exist! 📈</div>
         <button onclick="nextPage(3)">Compelling... tell me more</button>
     </div>
 
     <div id="page3" class="page">
-        <h1>Bahut saari Puchhiyan </h1>
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExem5yZ3R5bGtpajJsa2o2YXk4bHYxZXdhMGVnZmVieWd6dDd5c3M1cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xR5cPyPoL5HVXSphqA/giphy.gif" class="gif">
-        <p>Virtual Puchhiyan hin dee deten hain, Physical waalin toh de bhii nahii Sakte hen 🥲🥲</p>
-        <p>Toh chalte hen 7 crore ke sawaal pe(utna toh hai nahi hamaare paas par may be someday 🙂)</p>
-        <button onclick="nextPage(4)"> Chalo Phir </button>
+        <h1>Hamari Yaadein 📸</h1>
+        <div class="polaroid" style="transform: rotate(2deg);">
+            <img src="her.jpg" class="personal-img" alt="Her Photo" onerror="this.src='https://via.placeholder.com/250x300?text=Maalkin+ki+Photo'">
+        </div>
+        <p>Aap itni sundar ho ki mera focus Physics se zyada aap pe rehta hai! 😍</p>
+        <button onclick="nextPage(4)">Aur ek cheez...</button>
     </div>
 
     <div id="page4" class="page">
+        <h1>Bahut saari Puchhiyan 💋</h1>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExem5yZ3R5bGtpajJsa2o2YXk4bHYxZXdhMGVnZmVieWd6dDd5c3M1cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xR5cPyPoL5HVXSphqA/giphy.gif" class="gif">
+        <p>Virtual Puchhiyan hin de dete hain, Physical waalin toh de bhii nahii Sakte hen 🥲</p>
+        <p>Toh chalte hen 7 crore ke sawaal pe...</p>
+        <button onclick="nextPage(5)"> Chalo Phir </button>
+    </div>
+
+    <div id="page5" class="page">
         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWt1a2E3enB2am82bmV0cnhsM2JvYzJsb3B5OXFxcGFveTdjOW5zYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/1JmGiBtqTuehfYxuy9/giphy.gif" class="gif">
-        <h1>Kya app hamaari Premikaa Banogii ???(Maalkin toh pehle see ho hin )</h1>
+        <h1>Kya aap hamaari Premikaa Banogii? ❤️</h1>
+        <p>(Maalkin toh pehle se ho hin 😉)</p>
         <div style="height: 100px; position: relative;">
             <button id="yesBtn" onclick="celebrate()">YES! ❤️</button>
             <button id="noBtn">No</button>
         </div>
     </div>
 
-    <div id="page5" class="page">
-        <h1 class="animate__animated animate__bounceIn">WOHOOO! I knew you would say Yes (Well you did'nt have an option😜)🎉</h1>
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW9qMGgxZWR0c25tNXV0c3JuM3BkeDk5NGhqaHhyNWF5Z2tuNzRyYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fLy7yCDPAu4dE2OxO7/giphy.gif" class="gif">
-        <p>Distance is just a number...</p>
-        <p>But today, I wish that number was 0 km.😭😭😭😭 </p>
+    <div id="page6" class="page">
+        <h1 class="animate__animated animate__bounceIn">WOHOOO! 🎉</h1>
+        <div class="polaroid" style="transform: rotate(-1deg); width: 60%;">
+            <img src="us2.jpg" class="personal-img" alt="Us" onerror="this.src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW9qMGgxZWR0c25tNXV0c3JuM3BkeDk5NGhqaHhyNWF5Z2tuNzRyYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fLy7yCDPAu4dE2OxO7/giphy.gif'">
+        </div>
+        <p>I knew you would say Yes (Well, you didn't have an option😜)!</p>
+        <p>Distance is just a number... But today, I wish it was 0 km. 😭😭😭😭</p>
     </div>
 
     <script>
         function nextPage(pageNum) {
-            // Hide all pages
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            // Show the next one
             document.getElementById('page' + pageNum).classList.add('active');
         }
 
-        // The Running "No" Button
         const noBtn = document.getElementById('noBtn');
         noBtn.addEventListener('mouseover', () => {
             const x = Math.random() * (window.innerWidth - 100);
@@ -141,8 +172,7 @@
         });
 
         function celebrate() {
-            nextPage(5);
-            // Confetti effect
+            nextPage(6);
             setInterval(createHeart, 150);
         }
 
@@ -159,10 +189,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
